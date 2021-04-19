@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<style>
+    li{
+        display: inline;
+    }
+
+    .header_logo{
+        display: inline;
+        
+    }
+
+    .header_info{
+        display: inline;
+        
+    }
+
+    .header_myinfo{
+        display: inline;
+        
+    }
+</style>
+
+<body>
+    <div id = "page-wrapper">
+        <header id = "main-header">
+            <div class = "header_logo">airbnb</div>
+
+            <div class = "header_info">
+                <button>지도표시지역 / 날짜 / 게스트</button>
+            </div>
+
+            <div class = "header_myinfo">
+                <ul>
+                    <li>호스트되기</li>
+                    <li>언어선택</li>
+                    <li>내정보</li>
+                </ul>
+            </div>
+        </header>
+
+        <nav id = "main-navigation">
+            <h1>지도에서 선택한 지역의 숙소</h1>
+
+            <div>
+                <ul>
+                    <li>유연한 환불 정책</li>
+                    <li>숙소 유형</li>
+                    <li>요금</li>
+                    <li>즉시 예약</li>
+                    <li>필터 추가하기</li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id = "content">
+            <section id = "main-section">
+
+            </section>
+
+            <aside id = "main-aside">
+                
+                <div id="map" style="width:600px;height:600px;"></div>
+                <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=60b46d7c933520ef475e3648343ba427"></script>
+                
+                <script>
+                    var container = document.getElementById('map'); // 지도를 표시할 div 
+                    var options = {
+                        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                        level: 3 //지도의 확대 레벨
+                    };
+                    var map = new kakao.maps.Map(container, options);   // 지도를 생성합니다
+                </script>
+            </aside>
+        </div>
+
+        <footer id = "main-footer"></footer>
+
+    </div>
+
+
+</body>
