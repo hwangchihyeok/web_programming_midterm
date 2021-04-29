@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>칵테일</title>
+    <link rel = "stylesheet" type = "text/css" href="칵테일 재료.css">
+
+    <script>
+        function report() {
+
+
+            var Gin_Fizz = ['Gin', 'Lemon', 'Sugar_Syrup', 'Soda', 'Ice'];
+            var arr2 = new Array();
+            var temp = new Array();
+
+            arr2[0] = new Array();
+            arr2[0][0] = "Gimlet"; // 칵테일명
+            arr2[0][1] = "Gin"; // 칵테일 재료
+            arr2[0][2] = "Lime";
+            arr2[0][3] = "Sugar_Syrup";
+            arr2[0][4] = "Ice";
+
+            arr2[1] = new Array();
+            arr2[1][0] = "Buck_cocktails"; // 칵테일명
+            arr2[1][1] = "Gin"; // 칵테일 재료
+            arr2[1][2] = "Lime";
+            arr2[1][3] = "Ginger_Ale";
+            arr2[1][4] = "Ice";
+
+            arr2[2] = new Array();
+            arr2[2][0] = "Gin_FIzz"; // 칵테일명
+            arr2[2][1] = "Gin"; // 칵테일 재료
+            arr2[2][2] = "Lemon";
+            arr2[2][3] = "Sugar_Syrup";
+            arr2[2][4] = "Soda";
+            arr2[2][5] = "Ice";
+
+            var cocktail_name = "다음 칵테일을 만들 수 있습니다.\n";
+            var count = 0;
+            var msg = "다음 재료를 선택하셨습니다.\n";
+            var checkBoxes = document.getElementsByName("Ingredients"); // checkbox 값 받아오기
+
+            // checkbox 값 받아와서 문자배열에 값 넣기
+            for (var i = 0; i < checkBoxes.length; i++) {
+                if (checkBoxes[i].checked) {
+                    msg += ("- " + checkBoxes[i].value + "\n");
+                    temp[i] = checkBoxes[i].value;
+                }
+            }
+
+            // checkbox중 비어 있는값 제외하고 받아오기
+            var ingredients = temp.filter(element => element != null);
+            alert(ingredients);
+
+            // 만들 수 있는 칵테일 선택
+            for (var i = 0; i < arr2.length; i++) {
+                for (var j = 1; j <= arr2[i].length; j++) {
+                    for (var k = 0; k < ingredients.length; k++){
+                        if (arr2[i][j] === ingredients[k]) {
+                            count++;
+                            continue;
+                        }
+                    }
+                }
+                alert(count);
+                if ((count+1) == arr2[i].length) {
+                    cocktail_name += ("- "  + arr2[i][0] + "\n");
+                }
+                count = 0;
+            }
+
+            alert(msg);
+            alert(cocktail_name);
+        }
+    </script>
+</head>
+
+
+<body>
+    <div class = "frame">
+        <div class = "header">
+            <div class = "logo">Logo</div>
+        </div>
+
+        <div class = "container">
+            <div class = "nav">
+                <ul class = "nav-list">
+                    <li class = "nav-item"><a href = "칵테일 홈.html" class = "nav_link">칵테일 종류</a></li>
+                    <li class = "nav-item"><a href = "칵테일 재료.html" class = "nav_link">칵테일 재료</a></li>
+                </ul>
+            </div>
+
+            <div class = "content">
+            <h2 class="nom">Ingredients</h2>
+            <ul class="products">
+                <li class="box">
+                <div class="products-img"><img src="ALEXANDER.jpeg" alt="" /></div>
+                <div class="products-desc">
+                    <h3><a href="#">Gin</a></h3>
+                    <input type="checkbox" name="Ingredients" value="Gin">
+                    <p>used in number</p>
+                </div>
+                </li>
+
+                <li class="box">
+                <div class="products-img"><img src="images/product-02.jpg" alt="" /></div>
+                <div class="products-desc">
+                    <h3><a href="#">Ginger_Ale</a></h3>
+                    <input type="checkbox" name="Ingredients" value="Ginger_Ale">
+                </div>
+                </li>
+
+                <li class="box">
+                <div class="products-img"><img src="images/product-02.jpg" alt="" /></div>
+                <div class="products-desc">
+                    <h3><a href="#">Sugar_Syrup</a></h3>
+                    <input type="checkbox" name="Ingredients" value="Sugar_Syrup">
+                </div>
+                </li>
+
+                <li class="box">
+                    <div class="products-img"><img src="images/product-02.jpg" alt="" /></div>
+                    <div class="products-desc">
+                        <h3><a href="#">Ice</a></h3>
+                        <input type="checkbox" name="Ingredients" value="Ice">
+                    </div>
+                </li>
+
+                <li class="box">
+                    <div class="products-img"><img src="images/product-02.jpg" alt="" /></div>
+                    <div class="products-desc">
+                        <h3><a href="#">Lemon</a></h3>
+                        <input type="checkbox" name="Ingredients" value="Lemon">
+                    </div>
+                </li>
+
+                <li class="box">
+                    <div class="products-img"><img src="images/product-02.jpg" alt="" /></div>
+                    <div class="products-desc">
+                        <h3><a href="#">Lime</a></h3>
+                        <input type="checkbox" name="Ingredients" value="Lime">
+                    </div>
+                </li>
+
+                <li class="box">
+                    <div class="products-img"><img src="images/product-02.jpg" alt="" /></div>
+                    <div class="products-desc">
+                        <h3><a href="#">Soda</a></h3>
+                        <input type="checkbox" name="Ingredients" value="Soda">
+                    </div>
+                </li>
+
+            </ul>
+            <input type="button" value="submit" onclick="report()">
+            </div>
+        </div>
+    </div>
+</body>
