@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>칵테일 재료</title>
+    <link rel = "stylesheet" type = "text/css" href="칵테일 재료.css">
+    <!-- <script>
+        function cloneChild(target, n){
+            for(var i=1; i<n+1; i++){
+                var area = $('#_include-'+target);
+                var temp = document.createElement('div');
+                $(temp).load(target+'.html', function(response){
+                $(response).appendTo(area);
+                });
+            }
+        }
+    </script> -->
+</head>
+
+
+<body>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+     <!-- 칵테일 추천 자바스크립 -->
+    <script type="text/javascript" src="칵테일추천.js"></script>
+
+    <div class = "frame">
+        <div class = "header">
+            <div class = "logo">Logo</div>
+        </div>
+
+        <div class = "container">
+            <div class = "nav">
+                <ul class = "nav-list">
+                    <li class = "nav-item"><a href = "칵테일 홈.html" class = "nav_link">칵테일 종류</a></li>
+                    <li class = "nav-item"><a href = "칵테일 재료.html" class = "nav_link">칵테일 재료</a></li>
+                </ul>
+            </div>
+
+            <div class = "content">
+            <h2 class="nom">Ingredients</h2>
+            <ul class="products">
+
+
+                <li class="box">
+                <div class="products-img"><img src="ALEXANDER.jpeg" alt="" /></div>
+                <div class="products-desc">
+                    <h3><a href="#">Gin</a></h3>
+                    <input type="checkbox" name="Ingredients" value="Gin">
+                    <p>used in number</p>
+                </div>
+                </li>
+
+
+            </ul>
+            <input type="button" value="submit" onclick="report()">
+            </div>
+        </div>
+    </div>
+</body>

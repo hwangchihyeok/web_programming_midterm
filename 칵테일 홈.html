@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>칵테일</title>
+    <title>칵테일 홈</title>
     <link rel = "stylesheet" type = "text/css" href="칵테일홈.css">
 </head>
 
@@ -20,6 +20,7 @@
                 <ul class = "nav-list">
                     <li class = "nav-item"><a href = "칵테일 홈.html" class = "nav_link">칵테일 종류</a></li>
                     <li class = "nav-item"><a href = "칵테일 재료.html" class = "nav_link">칵테일 재료</a></li>
+                    <li class = "nav-item"><a href = "칵테일추천.html" class = "nav_link">칵테일 재료실험</a></li>
                 </ul>
             </div>
 
@@ -27,21 +28,39 @@
 
                 <h2 class="nom">Meet our Cocktails</h2>
                 <ul class="products">
-                    <li class="box">
-                    <div class="products-img"><img src="ALEXANDER.jpeg" alt="" /></div>
-                    <div class="products-desc">
-                        <h3><a href="#">ALEXANDER</a></h3>
-                        <p>Ingredients</p>
-                        <p>30 ml Cognac</p>
-                        <p>30 ml Crème de Cacao (Brown)</p>
-                        <p>30 ml Fresh Cream</p>
-                    </div>
-                    </li>
+
+                        <script>
+                                var Buck_cocktails = ["50ml Gin",
+                                                        "1 Lime",
+                                                        "100ml Ginger Ale",
+                                                        "100gr Ice"
+                                                    ];
+
+                                var Gimlet = ["60ml Gin",
+                                                "1half Lime",
+                                                "15ml Sugar Syrup",
+                                                "50gr Ice"
+                                                    ];
+
+                            for (var i = 0; i < 3; i++){
+                                document.write("<li class='box'>");
+                                document.write("<div class='products-img'><img src='ALEXANDER.jpeg' alt='' /></div>");
+                                document.write("<div class='products-desc'>");
+                                document.write("<h3><a href='#'>ALEXANDER</a></h3>");
+
+                                document.write("<p>Ingredients</p>");
+                                for (var j = 0; j < Buck_cocktails.length; j++){
+                                    document.write("<p>"+ Buck_cocktails[j] +"</p>");
+                                }
+                                document.write("</div>");
+                                document.write("</li>");
+                        }
+                        </script>
 
                     <li class="box">
                     <div class="products-img"><img src="images/product-02.jpg" alt="" /></div>
                     <div class="products-desc">
-                        <h3><a href="#">ALEXANDER</a></h3>
+                        <h3><a href="#">Americano</a></h3>
                         <p>Ingredients</p>
                         <p>30 ml Bitter Campari</p>
                         <p>30 ml Sweet Red Vermouth</p>
