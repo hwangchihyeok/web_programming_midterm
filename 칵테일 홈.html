@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <script type="text/javascript" src="칵테일추천.js"></script>
+    <script type="text/javascript" src="재료print.js"></script>
+    <script type="text/javascript" src="칵테일레시피모음.js"></script>
+    
     <div class = "frame">
         <div class = "header">
             <div class = "logo">Logo</div>
@@ -20,7 +24,7 @@
                 <ul class = "nav-list">
                     <li class = "nav-item"><a href = "칵테일 홈.html" class = "nav_link">칵테일 종류</a></li>
                     <li class = "nav-item"><a href = "칵테일 재료.html" class = "nav_link">칵테일 재료</a></li>
-                    <li class = "nav-item"><a href = "칵테일추천.html" class = "nav_link">칵테일 재료실험</a></li>
+                    <!-- <li class = "nav-item"><a href = "칵테일추천.html" class = "nav_link">칵테일 재료실험</a></li> -->
                 </ul>
             </div>
 
@@ -30,35 +34,13 @@
                 <ul class="products">
 
                         <script>
-                                var Buck_cocktails = ["50ml Gin",
-                                                        "1 Lime",
-                                                        "100ml Ginger Ale",
-                                                        "100gr Ice"
-                                                    ];
-
-                                var Gimlet = ["60ml Gin",
-                                                "1half Lime",
-                                                "15ml Sugar Syrup",
-                                                "50gr Ice"
-                                                    ];
-
-                            for (var i = 0; i < 3; i++){
-                                document.write("<li class='box'>");
-                                document.write("<div class='products-img'><img src='ALEXANDER.jpeg' alt='' /></div>");
-                                document.write("<div class='products-desc'>");
-                                document.write("<h3><a href='#'>ALEXANDER</a></h3>");
-
-                                document.write("<p>Ingredients</p>");
-                                for (var j = 0; j < Buck_cocktails.length; j++){
-                                    document.write("<p>"+ Buck_cocktails[j] +"</p>");
-                                }
-                                document.write("</div>");
-                                document.write("</li>");
-                        }
+                            coktails_num();
+                            print_coktail(); //칵테일 레시피 출력
                         </script>
-
+<!-- 
+                     원래 태그
                     <li class="box">
-                    <div class="products-img"><img src="images/product-02.jpg" alt="" /></div>
+                    <div class="products-img"><img src="재료사진/7up.jpg" alt="" /></div>
                     <div class="products-desc">
                         <h3><a href="#">Americano</a></h3>
                         <p>Ingredients</p>
@@ -66,48 +48,8 @@
                         <p>30 ml Sweet Red Vermouth</p>
                         <p>A splash of Soda Water</p>
                     </div>
-                    </li>
-
-                    <li class="last box">
-                    <div class="products-img"><img src="images/product-03.jpg" alt="" /></div>
-                    <div class="products-desc">
-                        <h3><a href="#">ANGEL FACE</a></h3>
-                        <p>Ingredients</p>
-                        <p>30 ml Gin</p>
-                        <p>30 ml Apricot Brandy</p>
-                        <p>30 ml Calvados</p>
-                    </div>
-                    </li>
-
-                    <li class="last box">
-                        <div class="products-img"><img src="images/product-03.jpg" alt="" /></div>
-                        <div class="products-desc">
-                            <h3><a href="#">ANGEL FACE</a></h3>
-                            <p>Ingredients</p>
-                            <p>30 ml Gin</p>
-                            <p>30 ml Apricot Brandy</p>
-                            <p>30 ml Calvados</p>
-                        </div>
-                    </li>
-
-                    <li class="last box">
-                        <div class="products-img"><img src="images/product-03.jpg" alt="" /></div>
-                        <div class="products-desc">
-                            <h3><a href="#">ANGEL FACE</a></h3>
-                            <p>Ingredients</p>
-                            <p>30 ml Gin</p>
-                            <p>30 ml Apricot Brandy</p>
-                            <p>30 ml Calvados</p>
-                        </div>
-                    </li>
-
-
-
-                        
+                    </li> -->
                 </ul>
-
-
-
             </div>
         </div>
     </div>
