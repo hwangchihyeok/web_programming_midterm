@@ -12,10 +12,12 @@ function report() {
     'Soda','Sugar','Sugar_Syrup','Tabasco','Tomato_Juice','Tonic','Water'];
 
     addJavascript('/js/칵테일레시피모음.js');
-
+    // addJavascript('/js/재료print.js');
+    
     var arr2 = new Array();
     var temp = new Array();
     var coktail_temp = new Array();
+    var temp1 = new Array();
 
     // 등록된 칵테일 수 받아오기
     var num = coktails_num();
@@ -24,6 +26,7 @@ function report() {
     for (var i = 0; i < num; i++){
         arr2[i] = new Array();
         coktail_temp = new Array();
+        temp1[i] = new Array();
     }
 
     // 등록된 칵테일 레시피 받아오기
@@ -38,16 +41,19 @@ function report() {
         coktail_temp[i] = arr2[i].filter(element => element != null);
     }
 
-    // for (var i = 0; i < num; i++){
-    //     alert(coktail_temp[i]);
-    // }
+    // 3차원 배열 만들기
+    for (var i = 0; i < num; i++){
+        for (var j = 0; j < coktail_temp[i].length; j++){
+            temp1[i][j] = new Array();
+        }
+    }
 
-    // arr2[0] = new Array();
-    // arr2[0][0] = "Gimlet"; // 칵테일명
-    // arr2[0][1] = "Gin"; // 칵테일 재료
-    // arr2[0][2] = "Lime";
-    // arr2[0][3] = "Sugar_Syrup";
-    // arr2[0][4] = "Ice";
+    // 3차원 배열에 용량과 재료명 분리
+    for (var i = 0; i < num; i++){
+        for (var j = 0; j < coktail_temp[i].length; j++){
+            temp1[i][j]= coktail_temp[i][j].split(" ");
+        }
+    }
 
     var cocktail_name = "다음 칵테일을 만들 수 있습니다.\n";
     var count = 0;
@@ -61,30 +67,26 @@ function report() {
             temp[i] = checkBoxes[i].value;
         }
     }
-    // checkbox중 비어 있는값 제외하고 받아오기
+
+    // 선택한 재료 null값 제외
     var ingredients = temp.filter(element => element != null);
-    // alert(ingredients);      // checkbox에서 null값 빼고 제대로 받아왔는지 확인
 
     // 만들 수 있는 칵테일 선택
     for (var i = 0; i < coktail_temp.length; i++) {
-        for (var j = 1; j <= coktail_temp[i].length; j++) {
+        for (var j = 1; j < coktail_temp[i].length; j++) {
             for (var k = 0; k < ingredients.length; k++){
-                var temp1 = coktail_temp[i][j];
-                var temp2 = ingredients[k];
-
-                if (temp1.indexOf(temp2)) {
+                if (temp1[i][j][1] == ingredients[k]) {
                     count++;
                     continue;
                 }
             }
         }
-        // alert(count); //제대로 값 들어갔는지 확인
         if ((count+1) == coktail_temp[i].length) {
             cocktail_name += ("- "  + coktail_temp[i][0] + "\n");
         }
         count = 0;
     }
 
-    alert(msg);
-    alert(cocktail_name);
+    alert(msg);                     // 선택한 재료 출력
+    alert(cocktail_name);           // 선택한 재료로 만들 수 있는 칵테일
 }

@@ -1,17 +1,33 @@
     body { 
         font:14px/1.8 Arial, Helvetica, sans-serif;
+        background-color: #FBEAEB
+   
+    }
+
+    h3 {
+        font-size: 30px;
+        color: #ed6a66;
+    }
+
+    p { 
+        color: #5457de;
+    }
+
+    .Ingredients { 
+        font-size: 20px;
+        color: #5457de;
     }
 
     .frame { 
         width:1000px;
         margin : 0 auto;
-        border : 1px solid #aaa;
+        border-bottom: 1px solid #2E3C7E;
     }
 
     .header { 
         padding : 40px 10px;
         text-align: center;
-        background: #eee;
+        background: #FBEAEB;
         margin-bottom: 20px;
     }
 
@@ -31,8 +47,8 @@
     .nav{
         float:left;
         width: 150px;
-        background: #333;
-        color: #fff;
+        background: #2E3C7E;
+        color: #FBEAEB;
         margin-right: 50px;
     }
 
@@ -44,17 +60,17 @@
 
     .nav-item{
         margin: 4px 0;
+        color: #FBEAEB;
     }
 
-    .nav-link{
+    .nav_link{
         display: block;
-        text-decoration: none;
         padding: 4px 10px;
-        color: #fff;
+        color: #FBEAEB;
     }
 
     .nav-link:hover{
-        background: #5457de;
+        background: #FBEAEB;
     }
 
     .content{
@@ -65,6 +81,8 @@
     .box {
         min-height:1px;
         _height:1%;
+        border-bottom: 1px solid #2E3C7E;
+        background-color: #FBEAEB;
     }
 
     .box:after {
@@ -90,10 +108,13 @@
         float:left;
         width:120px;
         height:170px;
+        background-color: #FBEAEB
     }
     .products .products-img img {
         width:120px;
         height:170px;
+        background-color: #FBEAEB
+
     }
     .products .products-desc {
         float:right;

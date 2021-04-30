@@ -11,7 +11,7 @@
     ["Buck_cocktails",
     "50ml Gin",
     "1 Lime",
-    "100ml Ginger Ale",
+    "100ml Ginger_Ale",
     "100gr Ice"
     ];
 
@@ -50,7 +50,7 @@
     var Greyhound = 
     ["Greyhound",
     "50ml Gin",
-    "200ml Grapefruit_Juic",
+    "200ml Grapefruit_Juice",
     "100gr Ice",
     ]; 
 
@@ -73,16 +73,16 @@
     var Salty_Dog = 
     ["Salty_Dog",
     "40ml Gin",
-    "100ml Grapefruit_Juic",
+    "100ml Grapefruit_Juice",
     "10gr Salt",
     "100gr Ice",
     ]; 
 
     var Stay_Sober = 
     ["Stay_Sober",
-    "30ml Apple Juice",
-    "30ml Cranberry_Juic",
-    "90ml Ginger Beer",
+    "30ml Apple_Juice",
+    "30ml Cranberry_Juice",
+    "90ml Ginger_Beer",
     "100gr Ice",
     ]; 
 
@@ -112,9 +112,9 @@ function print_coktail() {
             document.write("<li class='box'>");
             document.write("<div class='products-img'><img src=\'" + image_coktails[i] + "\' alt='' /></div>");
             document.write("<div class='products-desc'>");
-            document.write("<h3><a href='#'>" + coktails_name[i][0] + "</a></h3>");
+            document.write("<h3><U>" + coktails_name[i][0] + "</U></h3>");
 
-            document.write("<p>Ingredients</p>");
+            document.write("<p class = 'Ingredients'>Ingredients</p>");
 
             for (var j = 1; j < coktails_name[i].length; j++){
                 document.write("<p>"+ coktails_name[i][j] +"</p>");
