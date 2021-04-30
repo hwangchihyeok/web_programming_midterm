@@ -5,7 +5,7 @@
     }
 
     var image_coktails = ["칵테일사진/buck_cocktail.jpeg", "칵테일사진/gimlet.jpeg", "칵테일사진/jin_fizz.jpeg", "칵테일사진/gin_rickey.jpeg", "칵테일사진/gin_tonic.jpeg","칵테일사진/greyhound.jpeg",
-    "칵테일사진/john_collins.jpeg","칵테일사진/monkey_gland.jpeg","칵테일사진/salty_dog.jpeg","칵테일사진/stay_sober.jpeg",]
+    "칵테일사진/john_collins.jpeg","칵테일사진/monkey_gland.jpeg","칵테일사진/salty_dog.jpeg","칵테일사진/stay_sober.jpeg"];
     
     var Buck_cocktails = 
     ["Buck_cocktails",
@@ -85,6 +85,16 @@
     "90ml Ginger_Beer",
     "100gr Ice",
     ]; 
+
+    var Stay_Sober = 
+    ["Stay_Sober",
+    "30ml Apple_Juice",
+    "30ml Cranberry_Juice",
+    "90ml Ginger_Beer",
+    "100gr Ice",
+    ]; 
+
+
 
     coktails_name[0] = Buck_cocktails;
     coktails_name[1] = Gimlet;
