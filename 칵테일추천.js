@@ -12,7 +12,6 @@ function report() {
     'Soda','Sugar','Sugar_Syrup','Tabasco','Tomato_Juice','Tonic','Water'];
 
     addJavascript('/js/칵테일레시피모음.js');
-    // addJavascript('/js/재료print.js');
     
     var arr2 = new Array();
     var temp = new Array();
